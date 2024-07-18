@@ -4,12 +4,14 @@ import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { CustomerDetailsComponent } from './customer-details/customer-details.component';
 import { LoanComponent } from './loan/loan.component';
+import { LoanDialogComponent } from './loan-dialog/loan-dialog.component';
 
 const routes: Routes = [
   {path:'register',component:RegisterComponent},
   {path:'login',component:LoginComponent},
   { path: 'customer-details', component: CustomerDetailsComponent },
   { path: 'loan', component: LoanComponent },
+  { path: 'loan-dialog', component: LoanDialogComponent },
   {path:'',redirectTo:'/register',pathMatch:'full'}
 ];
 

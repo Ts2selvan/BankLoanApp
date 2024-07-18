@@ -1,0 +1,55 @@
+<h2 mat-dialog-title>Apply for Loan</h2>
+<mat-dialog-content [formGroup]="loanForm">
+  <form>
+    <mat-form-field>
+      <mat-label>Loan Type</mat-label>
+      <input matInput formControlName="loanType">
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Loan Description</mat-label>
+      <textarea matInput formControlName="loanDescription"></textarea>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Loan Amount</mat-label>
+      <input matInput type="number" formControlName="loanAmount">
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Max Loan Amount</mat-label>
+      <input matInput type="number" formControlName="maxLoanAmount">
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Loan Term</mat-label>
+      <input matInput type="number" formControlName="loanTerm">
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Application Date</mat-label>
+      <input matInput type="date" formControlName="applicationDate">
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Interest Rate</mat-label>
+      <input matInput type="number" formControlName="interestRate">
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Monthly Payment</mat-label>
+      <input matInput type="number" formControlName="monthlyPayment">
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Credit Score</mat-label>
+      <input matInput type="number" formControlName="creditScore">
+    </mat-form-field>
+
+    <mat-checkbox formControlName="loanDocumentsVerified">Loan Documents Verified</mat-checkbox>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button (click)="onCancel()">Cancel</button>
+  <button mat-button (click)="onApplyLoan()" cdkFocusInitial>Apply</button>
+</mat-dialog-actions>

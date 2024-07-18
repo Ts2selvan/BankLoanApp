@@ -23,7 +23,10 @@
         <td>{{ customer.phoneNumber }}</td>
         <td>{{ customer.dateOfBirth | date }}</td>
         <td>
-            <button (click)="applyLoan()">Apply for a Loan</button>
+            <!-- Add the Apply Loan Button -->
+<button mat-raised-button color="primary" (click)="openLoanDialog()">Apply for a Loan</button>
+
+            <!-- <button (click)="applyLoan()">Apply for a Loan</button> -->
           <!-- <button (click)="editCustomer(customer)">Edit</button> -->
           <!-- <button (click)="deleteCustomer(customer.customerId)">Delete</button> -->
         </td>

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AppService } from '../service/app.service';
 import { Customer } from '../models/customer.model';
+import { MatDialog } from '@angular/material/dialog';
+import { LoanDialogComponent } from '../loan-dialog/loan-dialog.component';
 
 @Component({
   selector: 'app-loan',
@@ -9,7 +11,8 @@ import { Customer } from '../models/customer.model';
 })
 export class LoanComponent implements OnInit {
   customers: Customer[] = [];
-  constructor(private authService:AppService) { }
+  customerId:any
+  constructor(private authService:AppService,private dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.loadCustomers();
@@ -41,5 +44,19 @@ export class LoanComponent implements OnInit {
   approveLoan() {
     // Logic for approving a loan
     console.log('Approving a loan');
+  }
+
+  openLoanDialog(): void {
+    const dialogRef = this.dialog.open(LoanDialogComponent, {
+      width: '400px',
+      data: { customerId: this.customerId }
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (result) {
+        // Handle the loan application result here
+        console.log('Loan applied:', result);
+      }
+    });
   }
 }
