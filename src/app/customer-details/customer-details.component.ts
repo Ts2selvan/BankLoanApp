@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AppService } from '../service/app.service'; 
 import { empty } from 'rxjs';
 import { Customer } from '../models/customer.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-customer-details',
@@ -34,7 +35,7 @@ export class CustomerDetailsComponent implements OnInit {
   customers: Customer[] = [];
 
 
-  constructor(private authService:AppService) { }
+  constructor(private authService:AppService,private router:Router) { }
 
   ngOnInit(): void {
     this.loadCustomers();
@@ -83,8 +84,11 @@ export class CustomerDetailsComponent implements OnInit {
             landmark: '',
             pincode: 0,
             country: ''
+          
           }
+         
         };
+        this.router.navigate(['/loan']); 
       },
       error => {
         alert('Adding failed!');

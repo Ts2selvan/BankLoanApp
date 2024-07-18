@@ -1,93 +1,51 @@
 .customer-details {
-  max-width: 100%;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  background-color: #f9f9f9;
-
-  h2 {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  
+    h2 {
       text-align: center;
-  }
-
-  .main-container {
+    }
+  
+    .form-container {
       display: flex;
-      gap: 20px;  // Space between form and table
-      flex-wrap: wrap;
-
-      .form-container {
-          flex: 2;  // Form  space
-          min-width: 0;
-          box-sizing: border-box;
-          max-width: 600px;  //  form stretch 
-      }
-
-      .table-container {
-          flex: 1;  // Table space
-          min-width: 0;
-          box-sizing: border-box;
-      }
-
-      .form-content {
-          display: flex;
-          justify-content: space-between;
-          // flex-direction: column;
-          // gap: 20px;
-      }
-
+      justify-content: space-between;
+  
       .form-section {
-          box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-          border-radius: 4px;
-          background-color: #fff;
-          padding: 10px;
-          margin-bottom: 20px;
-          width: 48%;
-
-          h3 {
-              text-align: center;
+        width: 48%; 
+        padding: 10px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        border-radius: 4px;
+        background-color: #fff;
+  
+        h3 {
+          text-align: center;
+        }
+  
+        .form-group {
+          margin-bottom: 15px;
+  
+          label {
+            display: block;
+            margin-bottom: 5px;
           }
-
-          .form-group {
-              margin-bottom: 15px;
-
-              label {
-                  display: block;
-                  margin-bottom: 5px;
-              }
-
-              input,
-              select {
-                  width: 100%;
-                  padding: 8px;
-                  border: 1px solid #ccc;
-                  border-radius: 4px;
-                  box-sizing: border-box;
-              }
+  
+          input,
+          select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
           }
+        }
       }
-
-      .customer-table {
-          width: 100%;
-          border-collapse: collapse;
-
-          th, td {
-              padding: 10px;
-              text-align: left;
-              border: 1px solid #ccc;
-          }
-
-          th {
-              background-color: #f2f2f2;
-          }
-
-          button {
-              margin-right: 5px;
-              cursor: pointer;
-          }
-      }
-  }
-
-  .submit-button {
+    }
+  
+    .submit-button {
       width: 100%;
       padding: 10px;
       margin-top: 20px;
@@ -96,9 +54,32 @@
       border: none;
       border-radius: 4px;
       cursor: pointer;
-
+  
       &:disabled {
-          background-color: #ccc;
+        background-color: #ccc;
       }
+    }
   }
-}
+
+  .customer-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  
+    th, td {
+      padding: 10px;
+      text-align: left;
+      border: 1px solid #ccc;
+    }
+  
+    th {
+      background-color: #f2f2f2;
+    }
+  
+    button {
+      margin-right: 5px;
+      cursor: pointer;
+    }
+  }
+  
+  
